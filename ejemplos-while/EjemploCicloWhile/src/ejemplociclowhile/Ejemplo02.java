@@ -25,9 +25,8 @@ public class Ejemplo02 {
         while (contador <= limite){
             if(contador%2 != 0) {
             System.out.printf("Contador %d\n", contador);
-               
-            }
             
+            }
             contador = contador + 1;
         }
         
