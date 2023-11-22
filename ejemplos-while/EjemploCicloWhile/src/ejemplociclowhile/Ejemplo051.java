@@ -12,37 +12,43 @@ import java.util.Scanner;
  *
  * @author reroes
  */
-public class Ejemplo05 {
+public class Ejemplo051 {
+
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
+
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
-        
+
         int limite = 3;
         int contador = 1;
         double suma_total = 0;
-        
+        String cadenaAcumuladora = "";
+
         double promedio_final;
         double calificacion;
-        
+
         System.out.println("Ingrese las notas de los estudiantes de su "
                 + "materia");
-        
-        while (contador <= limite){
+
+        while (contador <= limite) {
             System.out.printf("Ingrese calificación número %d\n",
-                          contador);
+                    contador);
             calificacion = entrada.nextDouble();
             suma_total = suma_total + calificacion;
+            
+            cadenaAcumuladora = String.format("%sCalificación ingresada: "
+                    + "%.2f\n", cadenaAcumuladora, calificacion);        
             // contador
             contador = contador + 1;
         }
-        
-        promedio_final = suma_total/limite;
-        System.out.printf("El promedio final es %f\n", promedio_final);
-        
+
+        promedio_final = suma_total / limite;
+        System.out.printf("%s\n",cadenaAcumuladora);
+        System.out.printf("Promedio igual %.2f\n",promedio_final);
+
     }
 }

@@ -32,7 +32,7 @@ public class Ejemplo03 {
             suma = suma + valor_ingresado;
             System.out.printf("Valor ingresado %d\n", 
                     valor_ingresado);
-            //contador = contador + 1;
+            contador = contador + 1;
         }
         // el código permite que el usuario ingrese varios valores, los cuales 
         // se acumulan y se termina mostrando la suma total de los valores
